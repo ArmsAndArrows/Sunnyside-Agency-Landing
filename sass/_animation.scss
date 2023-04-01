@@ -1,0 +1,49 @@
+@keyframes reveal {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes expand {
+    0% {
+        height: 0%;
+    }
+    100% {
+        height: 55%;
+    }
+}
+
+@keyframes arrowMove {
+    0% {
+        top: 47%;
+    }
+    50% {
+        top: 55%;
+    }
+    100% {
+        top: 47%;
+    }
+}
+
+@keyframes appearance {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes appearanceMove {
+    0% {
+        transform: translateY(40px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

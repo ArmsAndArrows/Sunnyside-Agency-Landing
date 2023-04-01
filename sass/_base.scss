@@ -1,0 +1,103 @@
+///Colors
+///
+$color-white: rgb(255, 255, 255);
+$color-black: rgb(0, 0, 0);
+
+$color-soft-red: hsl(7, 99%, 70%);
+$color-yellow: hsl(51, 100%, 49%);
+$color-dark-des-cyan: hsl(167, 40%, 24%); //graphic design text)
+$color-dark-blue: hsl(198, 62%, 26%); //photo
+$color-dark-mod-cyan: hsl(168, 34%, 41%); //footer
+$color-footer-bck: rgba(96, 189, 169, 0.685);
+
+$color-very-dark-des-blue: hsl(212, 27%, 19%);
+$color-very-dark-gray-blue: hsl(213, 9%, 39%);
+$color-dark-gray-blue: hsl(232, 10%, 55%);
+$color-gray-blue: hsl(210, 4%, 67%);
+
+///Fonts
+///
+$ft-thin: 100;
+$ft-light: 300;
+$ft-reg: 400;
+$ft-med: 500;
+$ft-semibold: 600;
+$ft-bold: 700;
+$ft-extrabold: 800;
+$ft-black: 900;
+
+///Breakpoints
+///
+$bp-xxs: 200px;
+$bp-xs: 320px;
+$bp-s: 375px;
+$bp-sm: 500px;
+$bp-m: 750px;
+$bp-l: 992px;
+$bp-el: 1200px;
+$bp-xel: 1500px;
+
+///Transition
+///
+$t-fast: all 0.2s ease-out;
+
+///BEGIN
+///
+html {
+    box-sizing: border-box;
+    font-size: 40%;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+
+    @media only screen and (min-width: $bp-xs) {
+        font-size: 62.5%; ////defines 10px as root
+    }
+    @media only screen and (min-width: $bp-xel) {
+        font-size: 80%; ////defines 10px as root
+    }
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.25;
+    width: 100%;
+
+    font-family: "Fraunces", serif;
+}
+
+///MAIN GRID LAYOUT
+///
+.grid-layout-main {
+    ///Grid Control
+    --grid-inner-margin: 10%;
+    --grid-col-gap: 0%;
+    --grid-row-gap: 0%;
+
+    gap: var(--grid-row-gap) var(--grid-col-gap);
+    display: grid;
+    width: 100vw;
+    max-width: 100%;
+    grid-template-columns: var(--grid-inner-margin) repeat(10, 1fr) var(--grid-inner-margin);
+}
+
+///REVEAL CLASS
+///
+.grid-reveal {
+    display: grid !important;
+}
+
+///ANIMATION AFTER LOADING SITE
+///
+h1,
+h2,
+h3,
+h4 {
+    animation: appearance 1s ease-in, appearanceMove 1s ease-out;
+}
+
+p,
+li,
+.logo,
+a,
+span {
+    animation: appearance 1.2s ease-in;
+}
